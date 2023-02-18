@@ -1,3 +1,4 @@
+// @ts-nocheck
 import detectIndent from 'detect-indent';
 import pug from 'pug';
 import pug_hack from './pug_hack.js';

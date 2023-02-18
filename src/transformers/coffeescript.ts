@@ -1,3 +1,4 @@
+// @ts-nocheck
 import coffeescript from 'coffeescript';
 import {coffee_plus} from 'coffee_plus';
 const compile = coffee_plus(coffeescript);
