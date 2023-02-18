@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 _DIR=$(
-  cd "$(dirname "$0")"
-  pwd
+cd "$(dirname "$0")"
+pwd
 )
 
 cd $_DIR
@@ -18,6 +18,8 @@ add() {
 
 cd src/transformers
 bun run cep -- -c .
+nr build
+
 cd $_DIR
 
 add
