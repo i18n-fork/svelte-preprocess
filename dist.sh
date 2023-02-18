@@ -16,9 +16,8 @@ add() {
   git commit -m v$version || true
 }
 
-cd src/transformers
-bun run cep -- -c .
 nr build
+bun run cep -- -c src -o dist
 
 cd $_DIR
 
