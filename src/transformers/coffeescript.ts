@@ -1,4 +1,7 @@
 import coffeescript from 'coffeescript';
+import {coffee_plus} from 'coffee_plus';
+const compile = coffee_plus(coffeescript);
+
 
 import type { Transformer, Options } from '../types';
 
@@ -17,7 +20,7 @@ const transformer: Transformer<Options.Coffeescript> = ({
   } as Omit<Options.Coffeescript, 'bare'>;
 
   if (coffeeOptions.sourceMap) {
-    const { js: code, v3SourceMap } = coffeescript.compile(
+    const { js: code, v3SourceMap } = compile(
       content,
       coffeeOptions,
     );
@@ -27,7 +30,7 @@ const transformer: Transformer<Options.Coffeescript> = ({
     return { code, map };
   }
 
-  return { code: coffeescript.compile(content, coffeeOptions) };
+  return { code: compile(content, coffeeOptions) };
 };
 
 export { transformer };
