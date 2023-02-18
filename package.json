@@ -39,7 +39,7 @@
     "minor": "npm version minor -m 'chore(release): %s'",
     "major": "npm version major -m 'chore(release): %s'",
     "prepublishOnly": "pnpm test && pnpm build",
-    "prepare": "husky install"
+    "prepare": ""
   },
   "commitlint": {
     "extends": [
