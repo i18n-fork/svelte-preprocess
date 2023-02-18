@@ -1,3 +1,12 @@
+## [5.0.2](https://github.com/sveltejs/svelte-preprocess/compare/v5.0.1...v5.0.2) (2023-02-18)
+
+
+### Bug Fixes
+
+* fix ([32c4f6e](https://github.com/sveltejs/svelte-preprocess/commit/32c4f6ea703a84116916b64738ce268f466ad8ff))
+
+
+
 ## [5.0.1](https://github.com/sveltejs/svelte-preprocess/compare/v5.0.0...v5.0.1) (2023-01-20)
 
 ### Bug Fixes
