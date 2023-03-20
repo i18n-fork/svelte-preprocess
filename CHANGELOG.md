@@ -1,3 +1,7 @@
+## [5.0.6](https://github.com/sveltejs/svelte-preprocess/compare/v5.0.5...v5.0.6) (2023-03-20)
+
+
+
 ## [5.0.5](https://github.com/sveltejs/svelte-preprocess/compare/v5.0.4...v5.0.5) (2023-03-20)
 
 
