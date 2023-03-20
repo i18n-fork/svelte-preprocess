@@ -86,7 +86,7 @@
   },
   "dependencies": {
     "@types/pug": "^2.0.6",
-    "@w5/coffee_plus": "^0.0.10",
+    "@w5/coffee_plus": "^0.0.11",
     "detect-indent": "^6.1.0",
     "magic-string": "^0.30.0",
     "sorcery": "^0.11.0",
