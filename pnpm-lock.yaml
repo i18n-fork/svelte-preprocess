@@ -18,7 +18,7 @@ specifiers:
   babel-minify: ^0.5.2
   coffeescript: ^2.7.0
   conventional-changelog-cli: ^2.2.2
-  detect-indent: ^7.0.1
+  detect-indent: ^6.1.0
   eslint: ^8.36.0
   husky: ^8.0.3
   jest: ^29.5.0
@@ -32,7 +32,7 @@ specifiers:
   pug: ^3.0.2
   sass: ^1.59.3
   sorcery: ^0.11.0
-  strip-indent: ^4.0.0
+  strip-indent: ^3.0.0
   stylus: ^0.59.0
   sugarss: ^4.0.1
   svelte: ^3.57.0
@@ -42,10 +42,10 @@ specifiers:
 dependencies:
   '@types/pug': 2.0.6
   '@w5/coffee_plus': 0.0.12
-  detect-indent: 7.0.1
+  detect-indent: 6.1.0
   magic-string: 0.30.0
   sorcery: 0.11.0
-  strip-indent: 4.0.0
+  strip-indent: 3.0.0
 
 devDependencies:
   '@babel/core': 7.21.3
@@ -3314,9 +3314,9 @@ packages:
       object-keys: 1.1.1
     dev: true
 
-  /detect-indent/7.0.1:
-    resolution: {integrity: sha512-Mc7QhQ8s+cLrnUfU/Ji94vG/r8M26m8f++vyres4ZoojaRDpZ1eSIh/EpzLNwlWuvzSZ3UbDFspjFvTDXe6e/g==}
-    engines: {node: '>=12.20'}
+  /detect-indent/6.1.0:
+    resolution: {integrity: sha512-reYkTUJAZb9gUuZ2RvVCNhVHdg62RHnJ7WJl8ftMi4diZ6NWlciOzQN88pUhSELEwflJht4oQDv0F0BMlwaYtA==}
+    engines: {node: '>=8'}
     dev: false
 
   /detect-newline/3.1.0:
@@ -6684,14 +6684,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       min-indent: 1.0.1
-    dev: true
-
-  /strip-indent/4.0.0:
-    resolution: {integrity: sha512-mnVSV2l+Zv6BLpSD/8V87CW/y9EmmbYzGCIavsnsI6/nwn26DwffM/yztm30Z/I2DY9wdS3vXVCMnHDgZaVNoA==}
-    engines: {node: '>=12'}
-    dependencies:
-      min-indent: 1.0.1
-    dev: false
 
   /strip-json-comments/3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
