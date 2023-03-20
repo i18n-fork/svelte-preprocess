@@ -12,7 +12,7 @@ specifiers:
   '@types/node': ^18.15.3
   '@types/pug': ^2.0.6
   '@types/stylus': ^0.48.38
-  '@w5/coffee_plus': ^0.0.10
+  '@w5/coffee_plus': ^0.0.12
   '@w5/jsext': ^0.0.1
   autoprefixer: ^10.4.14
   babel-minify: ^0.5.2
@@ -28,7 +28,7 @@ specifiers:
   postcss: ^8.4.21
   postcss-easy-import: ^4.0.0
   postcss-load-config: ^4.0.1
-  prettier: ^2.8.4
+  prettier: ^2.8.5
   pug: ^3.0.2
   sass: ^1.59.3
   sorcery: ^0.11.0
@@ -41,7 +41,7 @@ specifiers:
 
 dependencies:
   '@types/pug': 2.0.6
-  '@w5/coffee_plus': 0.0.10
+  '@w5/coffee_plus': 0.0.12
   detect-indent: 7.0.1
   magic-string: 0.30.0
   sorcery: 0.11.0
@@ -52,8 +52,8 @@ devDependencies:
   '@babel/preset-env': 7.20.2_@babel+core@7.21.3
   '@commitlint/cli': 17.4.4
   '@commitlint/config-conventional': 17.4.4
-  '@kiwi/eslint-config': 2.0.4_ht7tjkmii6sia5lysnuha3dena
-  '@kiwi/prettier-config': 2.0.4_prettier@2.8.4
+  '@kiwi/eslint-config': 2.0.4_j7tf374y2uxwiihryk6hswlsla
+  '@kiwi/prettier-config': 2.0.4_prettier@2.8.5
   '@types/babel__core': 7.20.0
   '@types/jest': 29.5.0
   '@types/node': 18.15.3
@@ -71,7 +71,7 @@ devDependencies:
   postcss: 8.4.21
   postcss-easy-import: 4.0.0_postcss@8.4.21
   postcss-load-config: 4.0.1_postcss@8.4.21
-  prettier: 2.8.4
+  prettier: 2.8.5
   pug: 3.0.2
   sass: 1.59.3
   stylus: 0.59.0
@@ -1792,7 +1792,7 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@kiwi/eslint-config/2.0.4_ht7tjkmii6sia5lysnuha3dena:
+  /@kiwi/eslint-config/2.0.4_j7tf374y2uxwiihryk6hswlsla:
     resolution: {integrity: sha512-t1vO15cJNwXrBRkkrh28ESjHko1vzsvCl0b5/qSKH+8WkzsJMBcMiy0YnNe5d6F9Ozj978ii9qTa7ly1FbEatA==}
     peerDependencies:
       eslint: ^8
@@ -1821,12 +1821,12 @@ packages:
       eslint-plugin-jest: 27.2.1_ccrqb4jwxka5photvcep762rre
       eslint-plugin-jsx-a11y: 6.7.1_eslint@8.36.0
       eslint-plugin-node: 11.1.0_eslint@8.36.0
-      eslint-plugin-prettier: 4.2.1_eqzx3hpkgx5nnvxls3azrcc7dm
+      eslint-plugin-prettier: 4.2.1_e4jq4ivnnnwcsomlcyj2qoljy4
       eslint-plugin-react: 7.32.2_eslint@8.36.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.36.0
       eslint-plugin-svelte3: 4.0.0_wzem237sbvnwe7n34ytc5phasy
       jest: 29.5.0_@types+node@18.15.3
-      prettier: 2.8.4
+      prettier: 2.8.5
       svelte: 3.57.0
       typescript: 5.0.2
     transitivePeerDependencies:
@@ -1843,12 +1843,12 @@ packages:
       eslint: 8.36.0
     dev: true
 
-  /@kiwi/prettier-config/2.0.4_prettier@2.8.4:
+  /@kiwi/prettier-config/2.0.4_prettier@2.8.5:
     resolution: {integrity: sha512-iweglZ+3a9mAyh5HnTBKH1+8DDI7r4N2iRoMCApN8RFayI13g4X7IWus0/ajvXpxsfsRqIkg+4MtlfKaPrA5XQ==}
     peerDependencies:
       prettier: ^2
     dependencies:
-      prettier: 2.8.4
+      prettier: 2.8.5
     dev: true
 
   /@nodelib/fs.scandir/2.1.5:
@@ -2148,8 +2148,8 @@ packages:
     resolution: {integrity: sha512-O67qYWwFJOFKOq7Agpa7bheF+U0j3NKLuVm84eojoOsgpTQuJmLw5VyjD1FcZQvrbVuby7xbVISEBsrWZk+rBQ==}
     dev: false
 
-  /@w5/coffee_plus/0.0.10:
-    resolution: {integrity: sha512-Lq/wihDjMCDMHZ2kudFTV62hcKZoI/vlZXh9bBRRuAqL9qOTHg+UPkGcsCxD9BLio2XnQ3kItLLRRWP0nRCJww==}
+  /@w5/coffee_plus/0.0.12:
+    resolution: {integrity: sha512-lw+riVAMVyoEr0ROWY7Jpeuv9d5iwCDg3/6YhKzVrIDJ5ggCuG7t/LIe0oZ2SFG/IeT+fNXPJN3g1OeQ/VihKA==}
     hasBin: true
     dependencies:
       '@w5/camel': 0.0.1
@@ -3669,7 +3669,7 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /eslint-plugin-prettier/4.2.1_eqzx3hpkgx5nnvxls3azrcc7dm:
+  /eslint-plugin-prettier/4.2.1_e4jq4ivnnnwcsomlcyj2qoljy4:
     resolution: {integrity: sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -3682,7 +3682,7 @@ packages:
     dependencies:
       eslint: 8.36.0
       eslint-config-prettier: 8.7.0_eslint@8.36.0
-      prettier: 2.8.4
+      prettier: 2.8.5
       prettier-linter-helpers: 1.0.0
     dev: true
 
@@ -5962,8 +5962,8 @@ packages:
       fast-diff: 1.2.0
     dev: true
 
-  /prettier/2.8.4:
-    resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
+  /prettier/2.8.5:
+    resolution: {integrity: sha512-3gzuxrHbKUePRBB4ZeU08VNkUcqEHaUaouNt0m7LGP4Hti/NuB07C7PPTM/LkWqXoJYJn2McEo5+kxPNrtQkLQ==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
