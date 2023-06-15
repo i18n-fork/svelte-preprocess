@@ -1,3 +1,12 @@
+## [5.0.12](https://github.com/wacfork/svelte-preprocess/compare/v5.0.11...v5.0.12) (2023-06-15)
+
+
+### Bug Fixes
+
+* merge ([af6f383](https://github.com/wacfork/svelte-preprocess/commit/af6f3831c05921d44c4f65a9b7d90a099cc0666c))
+
+
+
 ## [5.0.11](https://github.com/wacfork/svelte-preprocess/compare/v4.10.4...v5.0.11) (2023-06-15)
 
 
