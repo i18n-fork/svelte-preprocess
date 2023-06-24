@@ -1,3 +1,7 @@
+## [5.0.13](https://github.com/wacfork/svelte-preprocess/compare/v5.0.12...v5.0.13) (2023-06-24)
+
+
+
 ## [5.0.12](https://github.com/wacfork/svelte-preprocess/compare/v5.0.11...v5.0.12) (2023-06-15)
 
 
