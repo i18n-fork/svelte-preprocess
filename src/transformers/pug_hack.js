@@ -98,46 +98,47 @@ bind = (pug) => {
       };
       if (attr) {
         if (attr.indexOf('="') < 0) {
-          switch (attr.charAt(0)) {
-            case '@':
-              if (attr.charAt(1) === '&') {
-                wrap('bind:this=', attr.slice(2));
-              } else {
-                等号 = attr.indexOf('=');
-                if (等号 < 0) {
-                  attr = attr.slice(1);
-                  if (attr !== 'message') {
-                    wrap('on:' + attr + '=', attr.split('|', 1)[0]);
+          if (attr.endsWith(':')) {
+            set('{' + attr.slice(0, attr.length - 1) + '}');
+          } else {
+            switch (attr.charAt(0)) {
+              case '@':
+                if (attr.charAt(1) === '&') {
+                  wrap('bind:this=', attr.slice(2));
+                } else {
+                  等号 = attr.indexOf('=');
+                  if (等号 < 0) {
+                    attr = attr.slice(1);
+                    if (attr !== 'message') {
+                      wrap('on:' + attr + '=', attr.split('|', 1)[0]);
+                    } else {
+                      set('on:' + attr);
+                    }
                   } else {
-                    set('on:' + attr);
+                    replace('@', 'on');
                   }
-                } else {
-                  replace('@', 'on');
                 }
-              }
-              break;
-            case '&':
-              wrap('bind:value=', attr.slice(1));
-              break;
-            case ':':
-              set('{' + attr.slice(1) + '}');
-              break;
-            default:
-              pos = attr.indexOf('&');
-              等号 = attr.indexOf('=');
-              if (pos > 0 && 等号 < 0) {
-                wrap('bind:' + attr.slice(0, pos) + '=', attr.slice(pos + 1));
-              } else {
-                pos = attr.indexOf(':');
+                break;
+              case '&':
+                wrap('bind:value=', attr.slice(1));
+                break;
+              default:
+                pos = attr.indexOf('&');
+                等号 = attr.indexOf('=');
                 if (pos > 0 && 等号 < 0) {
-                  wrap(attr.slice(0, pos) + '=', attr.slice(pos + 1));
+                  wrap('bind:' + attr.slice(0, pos) + '=', attr.slice(pos + 1));
                 } else {
-                  冒号 = attr.indexOf(':');
-                  if (冒号 > 0 && 冒号 < 等号) {
-                    wrap(attr.slice(0, +等号 + 1 || 9e9), attr.slice(等号 + 1));
+                  pos = attr.indexOf(':');
+                  if (pos > 0 && 等号 < 0) {
+                    wrap(attr.slice(0, pos) + '=', attr.slice(pos + 1));
+                  } else {
+                    冒号 = attr.indexOf(':');
+                    if (冒号 > 0 && 冒号 < 等号) {
+                      wrap(attr.slice(0, +等号 + 1 || 9e9), attr.slice(等号 + 1));
+                    }
                   }
                 }
-              }
+            }
           }
         }
       }
@@ -186,10 +187,10 @@ if (process.argv[1] === __filename) {
     @submit|preventDefault=test
     @submit|preventDefault
     src:url
-    if null #:alt
     class:red=abc
     class:red
     @&ref
+    alt:
   )
   h2(class:red=abc)
   +elif x == 1

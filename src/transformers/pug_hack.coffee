@@ -91,37 +91,38 @@ bind = (pug)=>
 
           if attr
             if attr.indexOf('="')<0
-              switch attr.charAt(0)
-                when '@'
-                  if attr.charAt(1) == '&'
-                    wrap 'bind:this=', attr[2..]
-                  else
-                    等号 = attr.indexOf '='
-                    if 等号 < 0
-                      attr = attr[1..]
-                      if attr != 'message'
-                        wrap 'on:'+attr+'=',attr.split('|',1)[0]
+              if attr.endsWith ':'
+                set '{'+attr.slice(0,attr.length-1)+'}'
+              else
+                switch attr.charAt(0)
+                  when '@'
+                    if attr.charAt(1) == '&'
+                      wrap 'bind:this=', attr[2..]
+                    else
+                      等号 = attr.indexOf '='
+                      if 等号 < 0
+                        attr = attr[1..]
+                        if attr != 'message'
+                          wrap 'on:'+attr+'=',attr.split('|',1)[0]
+                        else
+                          set 'on:'+attr
                       else
-                        set 'on:'+attr
-                    else
-                      replace '@','on'
-                when '&'
-                  wrap 'bind:value=',attr[1..]
-                when ':'
-                  set '{'+attr[1..]+'}'
-                else
-                  pos = attr.indexOf('&')
-                  等号 = attr.indexOf '='
-                  if pos > 0 and 等号<0
-                    wrap 'bind:'+attr[...pos]+'=', attr[pos+1..]
+                        replace '@','on'
+                  when '&'
+                    wrap 'bind:value=',attr[1..]
                   else
-                    pos = attr.indexOf(':')
-                    if pos > 0 and 等号 < 0
-                      wrap attr[...pos]+'=', attr[pos+1..]
+                    pos = attr.indexOf('&')
+                    等号 = attr.indexOf '='
+                    if pos > 0 and 等号<0
+                      wrap 'bind:'+attr[...pos]+'=', attr[pos+1..]
                     else
-                      冒号 = attr.indexOf ':'
-                      if 冒号 > 0 and 冒号<等号
-                        wrap attr[..等号],attr[等号+1..]
+                      pos = attr.indexOf(':')
+                      if pos > 0 and 等号 < 0
+                        wrap attr[...pos]+'=', attr[pos+1..]
+                      else
+                        冒号 = attr.indexOf ':'
+                        if 冒号 > 0 and 冒号<等号
+                          wrap attr[..等号],attr[等号+1..]
 
           line
       ).join(' ')
@@ -164,10 +165,10 @@ p >mail_or_phone
     @submit|preventDefault=test
     @submit|preventDefault
     src:url
-    :alt
     class:red=abc
     class:red
     @&ref
+    alt:
   )
   h2(class:red=abc)
   +elif x == 1
