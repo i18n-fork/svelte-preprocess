@@ -1,3 +1,12 @@
+## [5.0.20](https://github.com/wacfork/svelte-preprocess/compare/v5.0.19...v5.0.20) (2023-08-16)
+
+
+### Bug Fixes
+
+* spelling "dianostics" - "diagnostics" ([#606](https://github.com/wacfork/svelte-preprocess/issues/606)) ([a48cc4e](https://github.com/wacfork/svelte-preprocess/commit/a48cc4e122f749a4edcd4c1873d9e340eb84a550))
+
+
+
 ## [5.0.4](https://github.com/sveltejs/svelte-preprocess/compare/v5.0.3...v5.0.4) (2023-05-26)
 
 ### Bug Fixes
