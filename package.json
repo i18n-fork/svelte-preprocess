@@ -56,8 +56,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.22.10",
-    "@babel/preset-env": "^7.22.10",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@kiwi/eslint-config": "^2.2.8",
@@ -67,7 +67,7 @@
     "@types/node": "^20.5.0",
     "@types/stylus": "^0.48.38",
     "@w5/jsext": "^0.0.1",
-    "autoprefixer": "^10.4.15",
+    "autoprefixer": "^10.4.16",
     "babel-minify": "^0.5.2",
     "coffeescript": "^2.7.0",
     "conventional-changelog-cli": "^3.0.0",
@@ -82,9 +82,9 @@
     "prettier": "^3.0.2",
     "pug": "^3.0.2",
     "sass": "^1.65.1",
-    "stylus": "^0.59.0",
+    "stylus": "^0.60.0",
     "sugarss": "^4.0.1",
-    "svelte": "^4.2.0",
+    "svelte": "^4.2.1",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
   },
