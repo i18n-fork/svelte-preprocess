@@ -15,7 +15,7 @@ dependencies:
     specifier: ^6.1.0
     version: 6.1.0
   magic-string:
-    specifier: ^0.30.2
+    specifier: ^0.30.5
     version: 0.30.5
   sorcery:
     specifier: ^0.11.0
@@ -71,13 +71,13 @@ devDependencies:
     specifier: ^3.0.0
     version: 3.0.0
   eslint:
-    specifier: ^8.47.0
+    specifier: ^8.52.0
     version: 8.52.0
   husky:
     specifier: ^8.0.3
     version: 8.0.3
   jest:
-    specifier: ^29.6.2
+    specifier: ^29.7.0
     version: 29.7.0(@types/node@20.8.7)(ts-node@10.9.1)
   less:
     specifier: ^4.2.0
@@ -86,7 +86,7 @@ devDependencies:
     specifier: ^14.0.0
     version: 14.0.1
   postcss:
-    specifier: ^8.4.28
+    specifier: ^8.4.31
     version: 8.4.31
   postcss-easy-import:
     specifier: ^4.0.0
@@ -101,7 +101,7 @@ devDependencies:
     specifier: ^3.0.2
     version: 3.0.2
   sass:
-    specifier: ^1.65.1
+    specifier: ^1.69.4
     version: 1.69.4
   stylus:
     specifier: ^0.60.0
@@ -116,7 +116,7 @@ devDependencies:
     specifier: ^29.1.1
     version: 29.1.1(@babel/core@7.23.2)(jest@29.7.0)(typescript@5.2.2)
   typescript:
-    specifier: ^5.1.6
+    specifier: ^5.2.2
     version: 5.2.2
 
 packages:
@@ -1603,7 +1603,7 @@ packages:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
     dependencies:
       eslint: 8.52.0
-      eslint-visitor-keys: 3.3.0
+      eslint-visitor-keys: 3.4.3
     dev: true
 
   /@eslint-community/regexpp@4.9.1:
