@@ -160,6 +160,7 @@ p >mail_or_phone
 +if 1
 
   form(
+    @click={reset.call(this)}
     @click={signin(1)}
     @click={signin=1}
     @submit|preventDefault=test
