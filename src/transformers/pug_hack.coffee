@@ -186,6 +186,9 @@ mixin p_input(placeholder)
       placeholder=" "
     )&attributes(attributes)
     label(for!=attributes.id)!= placeholder
++each li as [c,r,d,n]
+  tr {sign(n)}
+
 +p_input(>mail)(type="email" &mail)#i-user-mail
     """
     "src/Index.svelte"
