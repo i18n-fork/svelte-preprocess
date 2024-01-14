@@ -1,3 +1,12 @@
+## [5.0.9](https://github.com/3TiSite/svelte-preprocess/compare/v5.0.8...v5.0.9) (2024-1-14)
+
+
+### Bug Fixes
+
+* **s:** msg ([b11ba4c](https://github.com/3TiSite/svelte-preprocess/commit/b11ba4c6a4fccb9d42fb2084dc4f005312e95597))
+
+
+
 ## [5.0.8](https://github.com/3TiSite/svelte-preprocess/compare/v5.0.7...v5.0.8) (2024-1-9)
 
 
