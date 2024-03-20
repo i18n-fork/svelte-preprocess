@@ -95,17 +95,17 @@
     "detect-indent": "^6.1.0"
   },
   "peerDependencies": {
-    "svelte": "^4.2.8",
-    "@babel/core": "^7.23.7",
+    "svelte": "^4.2.12",
+    "@babel/core": "^7.24.1",
     "coffeescript": "^2.7.0",
     "less": "^4.2.0",
     "postcss": "^8",
-    "postcss-load-config": "^5.0.2",
+    "postcss-load-config": "^5.0.3",
     "pug": "^3.0.2",
-    "sass": "^1.69.7",
-    "stylus": "^0.62.0",
+    "sass": "^1.72.0",
+    "stylus": "^0.63.0",
     "sugarss": "^4.0.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   },
   "peerDependenciesMeta": {
     "@babel/core": {
