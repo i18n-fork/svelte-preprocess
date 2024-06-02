@@ -1,9 +1,15 @@
 #!/usr/bin/env -S node --trace-uncaught --expose-gc --unhandled-rejections=strict
-var pug_hack;
+var pug, pugHack;
 
-pug_hack = require('./pug_hack.coffee');
+pugHack = require('./pugHack.coffee');
 
-console.log(pug_hack(`p >mail_or_phone
+// console.log pugHack( """
+// i {(i[1]/100).toFixed(2)} EUR
+// select(@change=change)
+//   """
+//   "src/Index.svelte"
+// )
+pug = `p >mail_or_phone
   |>test
   | > test
   | >mail >or >phone
@@ -46,4 +52,20 @@ mixin p_input(placeholder)
 +each _LANG as i
   a(@click={c(i[1])} class:n={i[1]==NOW}) {i[0]}
 i {(i[1]/100).toFixed(2)} EUR
-select(@change=change)`, "src/Index.svelte"));
+select(@change=change)
++if md != undefined
+  Scroll(@&S)
+    +if A
+      Side
+        Toc(A:)
+    b
+      Mc
+        MdTxt(@&M md:md)
+      i-h.F foot
+  +else
+    Wait`;
+
+pug = `MdTxt(@&M md:md)
+i-h.F foot`;
+
+console.log(pugHack(pug, "src/Index.svelte"));

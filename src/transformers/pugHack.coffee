@@ -33,9 +33,10 @@ split = (txt)=>
 
 bind = (pug)=>
   pugExtract(pug).map (txt)=>
-    if txt[0] != '('
+    last = txt.length - 1
+    if (txt[0] != '(') or (txt[last] != ')')
       return txt
-    txt = txt.slice(1,txt.length-1)
+    txt = txt.slice(1,last)
     txt = split(txt).map(
       (line)=>
         if not line.trim()

@@ -1,13 +1,12 @@
 #!/usr/bin/env coffee
-pug_hack = require './pug_hack.coffee'
-# console.log pug_hack( """
+pugHack = require './pugHack.coffee'
+# console.log pugHack( """
 # i {(i[1]/100).toFixed(2)} EUR
 # select(@change=change)
 #   """
 #   "src/Index.svelte"
 # )
-
-console.log pug_hack( """
+pug = """
 p >mail_or_phone
   |>test
   | > test
@@ -52,6 +51,23 @@ mixin p_input(placeholder)
   a(@click={c(i[1])} class:n={i[1]==NOW}) {i[0]}
 i {(i[1]/100).toFixed(2)} EUR
 select(@change=change)
-  """
++if md != undefined
+  Scroll(@&S)
+    +if A
+      Side
+        Toc(A:)
+    b
+      Mc
+        MdTxt(@&M md:md)
+      i-h.F foot
+  +else
+    Wait
+"""
+pug = """
+MdTxt(@&M md:md)
+i-h.F foot
+"""
+console.log pugHack(
+  pug
   "src/Index.svelte"
 )

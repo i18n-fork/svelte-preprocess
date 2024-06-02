@@ -1,7 +1,7 @@
 // @ts-nocheck
 import detectIndent from 'detect-indent';
 import pug from 'pug';
-import pug_hack from './pug_hack.js';
+import pugHack from './pugHack.js';
 import type { Transformer, Options } from '../types';
 
 // Mixins to use svelte template features
@@ -71,7 +71,7 @@ const transformer: Transformer<Options.Pug> = async ({
   const { type: indentationType } = detectIndent(content);
   const input = `${GET_MIXINS(indentationType ?? 'space')}\n${content}`;
   const compiled = pug.compile(
-    pug_hack(input, filename, options),
+    pugHack(input, filename, options),
     pugOptions,
     // @types/pug compile() returned value doesn't have `dependencies` prop
   ) as pug.compileTemplate & { dependencies?: string[] };

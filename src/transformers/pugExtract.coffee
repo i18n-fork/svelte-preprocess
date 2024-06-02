@@ -67,7 +67,7 @@ module.exports = (输入)=>
             push 临时内容
 
   if 临时内容
-    结果.push [外部, 临时内容]
+    结果.push 临时内容
 
   return 结果
 
