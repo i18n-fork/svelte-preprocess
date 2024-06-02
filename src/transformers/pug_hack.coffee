@@ -2,7 +2,7 @@
 
 CMD = new Set('if else elif elseif key each await then catch html const debug'.split(' '))
 
-extract_li = (html, begin, end, replace)->
+extractLi = (html, begin, end, replace)->
   len = begin.length
   end_len = end.length
   pre = p = 0
@@ -15,16 +15,16 @@ extract_li = (html, begin, end, replace)->
       break
     p += len
     e = html.indexOf end,p
-    loop
-      if '}' == html.charAt(e+1)
-        e = html.indexOf end,e+1
-      else
-        break
+    if '}' == html.charAt(e+1)
+      p = e+1
+      li.push html[pre...p]
+      pre = p
+      continue
 
     if e < 0
       break
     li.push html[pre...p]
-    li.push replace html[p...e]
+    li.push replace html.slice(p,e)
     pre = e
     p = end_len + e
 
@@ -59,7 +59,7 @@ split = (txt)=>
 
 
 bind = (pug)=>
-  extract_li(
+  extractLi(
     pug
     '('
     ')'
@@ -160,6 +160,8 @@ p >mail_or_phone
 +if 1
 
   form(
+    on:change=change
+    @change=change
     @click={reset.call(this)}
     @click={signin(1)}
     @click={signin=1}
@@ -190,6 +192,8 @@ mixin p_input(placeholder)
   tr {sign(n)}
 
 +p_input(>mail)(type="email" &mail)#i-user-mail
+i {(i[1]/100).toFixed(2)} EUR
+select(@change=change)
     """
     "src/Index.svelte"
 )

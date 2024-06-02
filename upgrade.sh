@@ -4,4 +4,4 @@ DIR=$(realpath $0) && DIR=${DIR%/*}
 cd $DIR
 set -ex
 
-exec ncu -u svelte stylus pug postcss
+ncu -u stylus,svelte,pug,coffeescript,less,@babel/core,typescript,sass,sugarss,postcss,postcss-load-config
