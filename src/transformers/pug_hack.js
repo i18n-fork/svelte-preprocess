@@ -1,39 +1,11 @@
 #!/usr/bin/env -S node --trace-uncaught --expose-gc --unhandled-rejections=strict
-var CMD, bind, extract_li, main, split;
+var CMD, bind, main, pugExtract, split;
+
+pugExtract = require('./pugExtract.js');
+
+console.log(pugExtract);
 
 CMD = new Set('if else elif elseif key each await then catch html const debug'.split(' '));
-
-extract_li = function(html, begin, end, replace) {
-  var e, end_len, len, li, p, pre;
-  len = begin.length;
-  end_len = end.length;
-  pre = p = 0;
-  li = [];
-  while (true) {
-    p = html.indexOf(begin, p);
-    if (p < 0) {
-      li.push(html.slice(pre));
-      break;
-    }
-    p += len;
-    e = html.indexOf(end, p);
-    while (true) {
-      if ('}' === html.charAt(e + 1)) {
-        e = html.indexOf(end, e + 1);
-      } else {
-        break;
-      }
-    }
-    if (e < 0) {
-      break;
-    }
-    li.push(html.slice(pre, p));
-    li.push(replace(html.slice(p, e)));
-    pre = e;
-    p = end_len + e;
-  }
-  return li.join('');
-};
 
 split = (txt) => {
   var i, li, state, t;
@@ -69,7 +41,10 @@ split = (txt) => {
 };
 
 bind = (pug) => {
-  return extract_li(pug, '(', ')', (txt) => {
+  return pugExtract(pug).map((txt) => {
+    if (!txt[0] === '(') {
+      return txt;
+    }
     return split(txt).map((line) => {
       var attr, begin, end, pos, replace, set, wrap, 冒号, 等号;
       if (!line.trim()) {
@@ -148,11 +123,11 @@ bind = (pug) => {
 };
 
 module.exports = main = (pug, filename, options) => {
-  var cmd, i, j, len1, li, line, pos, ref, ts;
+  var cmd, i, j, len, li, line, pos, ref, ts;
   filename = filename.slice(4, -7);
   li = [];
   ref = bind(pug).split('\n');
-  for (j = 0, len1 = ref.length; j < len1; j++) {
+  for (j = 0, len = ref.length; j < len; j++) {
     line = ref[j];
     ts = line.trimStart();
     i = ts.trimEnd();
@@ -172,9 +147,3 @@ module.exports = main = (pug, filename, options) => {
   }
   return li.join('\n');
 };
-
-if (process.argv[1] === __filename) {
-  console.log(main(`
-i {toFixed(2)} EUR
-select(@change=change)`, "src/Index.svelte"));
-}
