@@ -1,3 +1,7 @@
+## [5.0.16](https://github.com/3TiSite/svelte-preprocess/compare/v5.0.15...v5.0.16) (2024-06-02)
+
+
+
 ## [5.0.15](https://github.com/3TiSite/svelte-preprocess/compare/v5.0.14...v5.0.15) (2024-06-02)
 
 
