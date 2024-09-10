@@ -1,3 +1,12 @@
+## [5.0.20](https://github.com/i18n-fork/svelte-preprocess/compare/v5.0.19...v5.0.20) (2024-09-10)
+
+
+### Bug Fixes
+
+* upgrade ([5a1a860](https://github.com/i18n-fork/svelte-preprocess/commit/5a1a860d028ba87a484472d1792ad6913001bdde))
+
+
+
 ## [5.0.19](https://github.com/3TiSite/svelte-preprocess/compare/v5.0.18...v5.0.19) (2024-06-02)
 
 

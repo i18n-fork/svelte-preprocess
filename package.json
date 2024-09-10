@@ -1,6 +1,6 @@
 {
   "name": "@3-/svelte-preprocess",
-  "version": "5.0.19",
+  "version": "5.0.20",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
