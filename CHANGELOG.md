@@ -1,3 +1,7 @@
+## [5.0.22](https://github.com/i18n-fork/svelte-preprocess/compare/v5.0.21...v5.0.22) (2024-10-21)
+
+
+
 ## [5.0.21](https://github.com/i18n-fork/svelte-preprocess/compare/v5.0.20...v5.0.21) (2024-09-10)
 
 
