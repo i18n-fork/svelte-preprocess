@@ -64,7 +64,7 @@ select(@change=change)
     Wait
 """
 pug = """
-MdTxt(@&M md:md)
+MdTxt(@&M md:md bind:xxx=md this={xx})
 i-h.F foot
 """
 console.log pugHack(
