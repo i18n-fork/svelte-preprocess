@@ -64,6 +64,9 @@ select(@change=change)
     Wait
 """
 pug = """
+textarea(
+  value&test
+)
 MdTxt(@&M md:md bind:xxx=md this={xx})
 i-h.F foot
 """
