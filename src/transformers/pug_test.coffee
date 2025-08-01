@@ -68,6 +68,8 @@ textarea(
   value&test
 )
 MdTxt(@&M md:md bind:xxx=md this={xx})
+form(value:test @click=hi @submit)
+form(@submit=submit)
 i-h.F foot
 """
 console.log pugHack(
